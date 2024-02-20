@@ -1,70 +1,123 @@
-# Az900-Module-4-Review
+# Az900-Module-5-Review
 
-## Azure Security features
+## Identity
 
-### Microsoft Defender for Cloud
-- A monitoring service app that provides protection across Azure & on-premise datacenters
-- Provides security recommendations
-- Detect & block malware
-- Analyze & identify potential attacks
-- Just-in-time access control for ports
-- Monthly payment plan required
+### Authentication vs Authorization
+- Authentication verifies identity and credentials
+- Authorization verifies level of access
 
-### Defender for Cloud Components
-- **Secure Score**:
-  - Aggregate all security findings into one score
-  - Microsoft cloud security benchmark (MCSB) standard is applied by default
-- **Multi-cloud coverage**:
-  - Most feature including security score supports Azure, AWS, GCP (Google Cloud)
-- **Advanced Cloud Security Posture Management**:
-  - Identify weaknesses in security posture
-  - *Security Governance* to drive actions to improve security
-  - *Regulatory Compliance* to standarize environment and configuration
-  - *Cloud security explorer* to build a comprehensive view of environment
-- **Data-aware Security Posture**:
-  - Auto-discovers datastores that has sensitive data
-  - Helps reduce risk of data breaches
-- **Attack path analysis**:
-  - Model traffic on your network to identify potential risks before user make changes
-- **Microsoft Entra Permissions Management**:
-  - Provide comprehensive visibility and control over permissions for any identity
+### Multi-Factor Authentication (MFA)
+- Username (identity)
+- Password (credentials)
+- Keys (certificate or personal questions)
 
-### Using Defender for Cloud
-- **Policy Compliance**: Run policies across management groups, subscriptions, or tenants
-- **Continuous Assessments**: Assess new and deployed resources to ensure that they are configure properly
-- **Tailored Recommendations**: Recommendations based on existing workload with instructions on how to implement them
-- **Threat Protection**: Analyze attempted threats through alerts & impacted resource reports
+### Azure Entra (Azure Active Directory / AAD)
+- A cloud-based identity and access management service
+- **Authentication**: Employees' sign-in
+- **Single sign-on (SSO)**
+- **Application management**
+- **Business to Business (B2B)**
+- **Business to Customer (B2C) identity services**
+- **Device Management**
 
-*Lab - Monitor and Resolve Security Issues by Using Security Center*
-
-### Resource hygiene
+### Conditional Access
+- Advanced access policy based on:
+  - User or Group Membership
+  - IP Location
+  - Device Type
+  - Application
+  - Real-time risk detection
 
 -----
 
-### Key Vault
-- Stores application secrets in a centralized cloud location
-- Controls access permissions & access logging
-  - Secrets management
-  - Key management
-  - Certificate management
-  - Storing secrets backed by hardware security modules (HSMs)
+### Azure Governance Methodologies
 
-*Lab - Manage Encryption by Using an Azure Key Vault*
+### Role-Based Access Control (RBAC)
+- A fine-grained access management that inherits Active Directory
+- Segragate duties by:
+  - User-groups
+  - Apps
+  - Individual-user
+  - Resource-group
+  - Individual-resources
 
-### Microsoft Sentinel
-- A security information & event management (SIEM) solution
-- Provides security analytics, threat intelligence across an enterprise
-- *Integrations:*
-  - Microsoft 365 Defender
-  - Azure Active Directory
-  - Azure Advanced Threat Protection
-  - Microsoft Cloud App Security
+### Resource locks
+- A locking feature that prevents accidental deletion
+- Manage locks at subscription, resource group, or individual resource levels
 
-### Azure Dedicated Hosts
-- Provide physical servers that host Azure VMs that is for a singal workload
-- Provides hardware isolation at server level
-- Controls over maintenance event timing
-- Aligned with Azure Hybrid Use Benefits
+| Lock Types   | Read | Update | Delete |
+|--------------|------|--------|--------|
+| CanNotDelete | Yes  | Yes    | No     |
+| ReadOnly     | Yes  | No     | No     |
+
+### Tags
+- Metadata for Azure resources
+- Organizes resources into a taxonomy
+- Consists of a name-value pair
+- Very useful for rolling up billing info
+
+### Azure Policy
+- Enforce org. standards by assessing compliance at-scale
+- Provides governance & resource consistency with:
+  - Regulatory compliance
+  - Security
+  - Cost
+  - Management
+- Provides built-in policy & initiative definitions, under:
+  - Storage
+  - Networking
+  - Compute
+  - Security Center
+  - Monitoring
+
+### Azure Blueprints
+- To rapidly build and stand up new environments
+- (?) Similar to Ansible
+- Build trust through org. compliance with a set of components:
+  - Role Assignments
+  - Policy Assignments
+  - Azure Resource Manager Templates
+  - Resource Groups
+
+### Cloud Adoption Framework for Azure
+- The Best practices / One Microsoft approach to cloud adoption
+- Tools, guidance and narratives for strategies and outcomes
+- **Strategy**
+  - Motivations
+  - Business outcomes
+  - Financial considerations
+- **Plan**
+  - Rationalize your digital estate
+  - Organizational alignment
+  - Skills readiness plan
+  - DevOps cloud adoption plan
+- **Ready**
+  - Operating model alignment
+  - Azure landing zone conceptual architecture
+  - Azure landing zone design areas
+  - Implementation options
+- **Migrate**
+  - Migration scenarios
+  - Cloud migration best practices
+  - Process improvements
+- **Innovate**
+  - Business value consensus
+  - Build your first MVP
+  - Measure for customer impact
+  - Expand digital inventions
+- **Secure**
+  - Risk insights
+  - Business resilience
+  - Asset protection
+- **Manage**
+  - Business commitments
+  - Management baseline
+  - Expand the baseline
+  - Advance operations and design principles
+- **Govern**
+  - Benchmark assessment
+  - Governance foundation
+  - Improve the foundation
 
 -----
 
