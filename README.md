@@ -204,7 +204,7 @@
 
 ## Quiz
 
-### Security
+### Authentication & Authorization features
 
 #### Which Azure Active Directory tool can vary the credentials needed to log in based on signals, such as where the user is located? 
 - Conditional Access
@@ -215,15 +215,74 @@
 #### ________ collects signals from the user, makes decisions based on those signals, and then enforces that decision by allowing or denying the access request or challenging for a multifactor authentication response.
 - Conditional Access
 
-#### True or False:
-- **Azure RBAC policies override restrictions defined by resource locks:**
-  - False, resource lock cannot be overriden
-- **If you place a resource lock on a resource group, all of the resources within the resource group will also have the resource lock applied**
+#### How can the IT department ensure that employees at the company's retail stores can access company applications only from approved tablet devices?
+- Conditional Access
+
+#### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
+- MFA
+
+#### How can the IT department reduce the number of times users must authenticate to access multiple applications?
+- SSO
+
+#### Which is likely the best way for companies to identify which billing department each Azure resource belongs to?
+- Tags
+
+#### Which of the following does Azure Active Directory support for passwordless authentication?
+- User X509 Certificates
+
+#### Which of the following does Azure Active Directory support for passwordless authentication?
+- FIDO2 security keys (key providers)
+- Microsoft Authenticator
+- Windows Hello for Business
+
+#### Which statement describes Azure Resource Locks?
+- A feature that allows customers to protect their resources from human-error accidents like modification or deletion of the resources 
+
+#### What kinds of security locks are supported by Azure?
+- Read-only
+- Delete
+
+#### True or False
+- **Read-only locks only allow read actions on resources. Every other action is blocked**
   - True
-- **Resource locks can be applied to individual resources, resource groups, or even an entire subscription.**
-  - True
-- **There are two types of resource locks, one that prevents users from deleting and one that prevents users from changing or deleting a resource.**
-  - True
+- **Delete locks only allows resoruces to be deleted but not created or updated.**
+  - False
+
+#### Azure Resource Locks can be applied on which scopes?
+- Azure Resource
+- Azure Resource Gruops
+- Azure Subscriptions
+
+-----
+
+<br>
+
+### Authentication & Authorization actions
+
+#### How can companies allow some users to control the VMs in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
+- Create a role assignment through Azure role-based access control (Azure RBAC)
+
+#### Which is the best way for companies to ensure that they only deploy cost-effective virtual machine SKU sizes?
+- Create a policy in Azure Policy that specifies the allowed SKU sizes
+
+#### Contoso company wants to protect their production Storage Account from being deleted by accident. Currently their Administrators group has Owner privileges on the entire resource group where the storage account resides.
+#### To achieve this they used Delete lock on the Storage Account resource. Will this solution work?
+- Yes
+
+-----
+
+<br>
+
+### Security models
+
+#### Each Azure subscription can contain multiple account administrators
+- False, 1 account administrator & 1 service administrator
+
+#### Each Azure subscription can be managed by using a Microsoft account only
+- False, Azure Active Directory / Azure Entra account is required
+
+#### An Azure Resource group contains multiple Azure subscription
+- False, multiple resource-(group)s is/are under Azure subscription
 
 #### Which security model assumes the worst-case security scenario, and protects resources accordingly?
 - Zero trust
@@ -236,247 +295,62 @@
 - **Segment access, verify end-to-end encryption, use analytics to get visibility, drive threat detection and improve defenses**
   - Assume Breach
 
+#### True or False:
+- **Azure RBAC policies override restrictions defined by resource locks:**
+  - False, resource lock cannot be overriden
+- **If you place a resource lock on a resource group, all of the resources within the resource group will also have the resource lock applied**
+  - True
+- **Resource locks can be applied to individual resources, resource groups, or even an entire subscription.**
+  - True
+- **There are two types of resource locks, one that prevents users from deleting and one that prevents users from changing or deleting a resource.**
+  - True
+
 -----
 
+<br>
+
 ### Compliance
+
+#### Your company plans to move several servers to Azure. The company's compliance policy states that a server named FinServer must be on a separate network segment.
+#### Which Azure solution should you recommend?
+- A virtual network for FinServer and another virtual network for all the other servers
+Note: Networks in Azure are known as virtual networks. A virtual network can have multiple IP address spaces and multiple subnets. Azure automatically routes traffic between different subnets within a virtual network.
+
+#### Where can a legal team access information around how the Microsoft cloud helps them secure sensitive data and comply with applicable laws and regulations?
+- Trust Center
+
+#### Where can you access information about how the Microsoft cloud helps the organization secure sensitive data and comply with applicable laws and regulations? 
+- Trust Center
 
 #### Where can you access details about the personal data Microsoft processes and how the company processes it, including for Cortana?
 - Microsoft Privacy Statement
 
-#### Where can you access information about how the Microsoft cloud helps the organization secure sensitive data and comply with applicable laws and regulations? 
-- True Center
-
 #### Where can an IT department find reference blueprints and policy definitions for common standards that it can apply directly to its Azure subscriptions?
 - Azure compliance documentation
 
-#### Which of the following does Azure Active Directory support for passwordless authentication?
-- User X509 Certificates
+#### What provide organizations with the ability to manage the compliance of Azure resources across multiple subscriptions.
+- Azure Policies
 
-#### Which of the following does Azure Active Directory support for passwordless authentication?
-- FIDO2 security keys (key providers)
-- Microsoft Authenticator
-- Windows Hello for Business
-
------
-
-### Microsoft Sentinel
-
-#### What does Microsoft Sentinel provide?
-- An end-to-end solution for security operations
-
-#### Which language is used to query data within Microsoft Sentinel?
-- KQL
-
-#### What is SIEM?
-- Security Information and Event Management
-
-#### What is Microsoft Sentinel?
-- cloud-native SIEM system
-
-#### What is the first step of data ingestion for Microsoft Sentinel?
-- Data connectors
-
-#### If you want to collect event data from various sources, and perform security operations on that data to identify suspicious activity, you should use ________________
-- Microsoft Sentinel
-
-####  The single most important option when creating a new Log Analytics Workspace is
-- the region
-
-#### To enable Microsoft Sentinel, you need ________ permissions to the subscription in which the Microsoft Sentinel workspace resides
-- Contributor
-
-#### To use Microsoft Sentinel, you need either ________ permissions on the resource group that the workspace belongs
-- contributor or reader
-
-#### After data is ingested into Microsoft Sentinel, where is it stored?
-- Log Analytics
-
-#### What language does Log Analytics use?
-- Kusto Query Language (KQL)
-
-#### What is used to create dashboards and visualization in Microsoft Sentinel?
-- Workbooks
-
-#### Which Azure service stores the log data that is ingested into Microsoft Sentinel?
-- Log Analytics
-
-#### Where is your log data stored?
-- Log Analytics workspace
-
-#### What’s the easiest way for Tailwind Traders to combine security data from all of its monitoring tools into a single report that it can take action on?
-- Collect security data in Azure Sentinel
+#### Your company plans to migrate to Azure. The company has several departments. All the Azure resources used by each department will be managed by a department administrator.
+#### What 2 ways can you segment Azure for the departments?
+- Multiple subscriptions
+- Multiple resource groups
 
 -----
 
-### Perimeter Layer Security
+### Unsorted
 
-#### An ASG enables you to group servers with similar ________ requirement, and group together servers with similar ________.
-- port filtering, functions
+#### Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
+#### The company has users that work remotely. The remote workers require access to the VMs on VNet1. To provide access for the remote workers, you:
+- Configure a Point-to-Site (P2S) VPN.
 
-#### The ________ layer is about protecting organizations from network-based attacks against your resources.
-- Network Perimeter
+#### You have an Azure environment that contains multiple Azure virtual machines.
+#### You plan to implement a solution that enables the client computers on your on-premises network to communicate to the Azure virtual machines.
+#### You need to recommend which Azure resources must be created for the planned solution.
+#### What 2 Azure resources should you include in the recommendation?
+- A virtual network gateway
+- A gateway subnet
 
-#### Which layer of Defense-in-depth is focused on preventing network-based attacks? 
-- Perimeter layer (Perimeter Security)
-
-#### What are network security groups?
-- Enables you to filter network traffic to and from Azure resources within an Azure virtual network
-
-#### Rules are processed by in what order?
-- By order of priority number (100 - 4096, Lower to high numbers)
-
-#### When you create a network security group what does Azure create to provide a baseline level of security?
-- A series of default rules
-
-#### How can Tailwind Traders most easily implement a deny by default policy so that VMs can't connect to each other? 
-- Create a network security group rule that prevents access from another VM on the same network
-
-#### Can you remove default rules Azure sets for Network Security groups?
-- No, but you can override them by creating new rules with high priorities
-
-#### ________ allow you to filter network traffic to and from Azure resources in an Azure virtual network. IT can contain multiple inbound and outbound security rules that enable you to filter traffic to and from resources by source destination IP address, port, and protocol.
-- Network security groups
-
-#### What's the best way for Tailwind Traders to limit all outbound traffic from VMs to known hosts?
-- Create application rules in Azure Firewall
-
-#### Use perimeter ________ with ________ to identify and alert on malicious attacks against your network.
-- firewalls, Azure firewall
-
-#### Azure Application Gateway also provides a firewall called:
-- Web application firewall
-
-#### You typically deploy Azure Firewall on a central virtual network to control:
-- General Network Access
-
-#### Azure Firewall Privides many features, including:
-- Built-in *High-Aavailability*
-- Unrestricted cloud *scalability*
-- Inbound and outbound *filtering* rules
-- Azure Monitoring *logging*
-
-#### Azure Firewall is fully integrated with  ________ for logging and analytics.
-- Azure Monitor
-
-#### ________ is a managed, cloud-based, network security service that protects your Azure Virtual Network resources. It is a fully stateful firewall as a service with built-in high availability & unrestricted cloud scalability.
-- Azure Firewall
-
-#### A ________ is a service that grants server access based on the originating IP address of each request.
-- Firewall
-
-#### What type of data is actively moving from one location to another, such as across the internet or through a private network?
-- In transit
-
-#### How can Tailwind Traders ensure that certain VM workloads are physically isolated from workloads being run by other Azure customers?
-- Run the VMs on Azure Dedicated Host
-
-#### How can Tailwind Traders allow some users to control the virtual machines in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
-- Create a role assignment through Azure role-based access control (Azure RBAC)
-
------
-
-### Access Management Layer Security
-
-#### ________ & ________ controls access to infrastructure and change control.
-- Identity, Access
-
-#### How can the IT department ensure that employees at the company's retail stores can access company applications only from approved tablet devices?
-- Conditional Access
-
-#### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
-- Multifactor authentication
-
-#### How can the IT department reduce the number of times users must authenticate to access multiple applications?
-- SSO
-
------
-
-### Data & other Layers' security
-
-#### Defense in depth can be visualized as:
-- A set of layers with the data to be secured in the center
-
-#### ________ is the first line of defense to protect computing hardware in the data center.
-- Physical layer security
-
-#### ________ ensures applications are secure and free from vulnerabilities.
-- Application layer
-
-#### ________ layer secures access to virtual machines.
-- Computer
-
-#### ________ layer limits communication between resources through segmentation and access control.
-- Networking
-
-#### ________ layer uses distributed denial-of-service (DDoS) protection to filter large-scale attacks before they can cause a denial of service for end users.
-- Perimeter
-
-#### What is SOAR?
-- Security, Orchestration, Automation, Response
-
-####  Which is the best way for Tailwind Traders to safely store its certificates so that they're accessible to cloud VMs?
-- Store the certificates in Azure Key Vault
-
-#### What strategy employs a series of mechanisms to slow the advance of an attack aimed at acquiring unauthorized access to data?
-- Defense-in-depth (combining measures)
-
-#### ________ is a monitoring service that provides threat protection across both Azure and on-premises datacenters 
-- Microsoft Defender for Cloud
-
-#### How can Tailwind Traders enforce having only certain applications run on its VMs?
-- Create an application control rule in Azure Security Center
-
-#### Features of Application security groups allow you to reuse your security policy at scale with out manual maintenance of what?
-- explicit IP addresses
-
-#### Use Azure ________ to filter large-scale attacks before they can cause a denial of service for end users.
-- DDos protection
-
-#### ________ target web application packets to disrupt the transmission of data between hosts.
-- Resource layer attacks
-
-####  ________ render a target inaccessible, by exploiting a weakness in the layer 3 and layer 4 protocol stack.
-- Protocol Attacks
-
-#### ________ goal is to flood the network layer with substantial amount of seemingly legitimate traffic.
-- Volumetric Attacks
-
-#### DDos standard protection can mitigate what three types of attacks?
-- Volumetric Attacks, Protocol Attacks, and Resource (application) Layer Attacks
-
-#### ________ enable you to configure network security as a natural extension of an application's structure, allowing you to group virtual machines and define network security policies based on those groups.
-- Application Security groups
-
-#### An attacker can bring down your website by sending a large volume of network traffic to your servers. Which Azure service can help Tailwind Traders protect its App Service instance from this kind of attack?
-- Azure DDoS Protection
-
-#### The ________ service tier of Azure DDos Protection provides additional mitigation capabilities that are tuned specifically to Microsoft Azure Virtual Network resources. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms.
-- standard
-
-#### The ____ service tier of Azure DDos Protection is automatically enabled as part of the Azure platform. Always-on traffic monitoring and real-time mitigation of common network-level attacks provide the same defenses that Microsoft's online services use.
-- basic
-
-#### What are the service tiers of Azure DDos Protection?
-- standard, basic
-
-#### How does Azure DDos protection service protect your Azure applications?
-- By scrubbing traffic at the Azure network edge
-
-#### DDos attacks can be targeted at any _____ that is publicly reachable through the internet. Thus any resourced exposed to the internet, such as a website, is potentially at risk from a DDos attack.
-- endpoint
-
-#### ______ attacks attempt to overwhelm and exhaust an application's resources, making the application slow or unresponsive to legitimate users.
-- DDoS
-
------
-
-### Others
-
-#### Which of the following is true for AzureHDInsight?
-- Open-source analytics service to analyze streaming or historical data
-
-#### Which of the following is true for Resource locking?
-- Prevents resources from being accidentally deleted or changed
-
-#### Which of the following is true for Azure Policy?
-- A service in Azure that enables you to create, assign, and manage policies that control or audit your resources
+#### Your company plans to migrate all its network resources to Azure. You need to start the planning process by exploring Azure.
+#### What should you create first?
+- Subscription
