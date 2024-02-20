@@ -21,7 +21,7 @@
 - *Device Management*
 
 ### Conditional Access
-- If a user wants to access a resource, then they must complete an action by detection:
+- If a user wants to access a resource, then they must perform action by detection of:
   - User or Group Membership
   - IP Location
   - Device Type
@@ -31,7 +31,7 @@
 
 -----
 
-### Azure Governance Methodologies
+## Azure Governance Methodologies
 
 ### Role-Based Access Control (RBAC)
 - A fine-grained access management that inherits Active Directory
@@ -58,13 +58,9 @@
 - Very useful for rolling up billing info
 
 ### Azure Policy
-- Enforce org. standards by assessing compliance at-scale
-- Provides governance & resource consistency with:
-  - Regulatory compliance
-  - Security
-  - Cost
-  - Management
-- Provides built-in policy & initiative definitions, under:
+- Assessing compliance by governance at-scale
+- Enforcing standards, compliance, service level agreements (SLAs)
+- Provides built-in policy & initiative definitions under categories such as:
   - Storage
   - Networking
   - Compute
@@ -79,46 +75,6 @@
   - Policy Assignments
   - Azure Resource Manager Templates
   - Resource Groups
-
-### Cloud Adoption Framework for Azure
-- The Best practices / One Microsoft approach to cloud adoption
-- Tools, guidance and narratives for strategies and outcomes
-- **Strategy**
-  - Motivations
-  - Business outcomes
-  - Financial considerations
-- **Plan**
-  - Rationalize your digital estate
-  - Organizational alignment
-  - Skills readiness plan
-  - DevOps cloud adoption plan
-- **Ready**
-  - Operating model alignment
-  - Azure landing zone conceptual architecture
-  - Azure landing zone design areas
-  - Implementation options
-- **Migrate**
-  - Migration scenarios
-  - Cloud migration best practices
-  - Process improvements
-- **Innovate**
-  - Business value consensus
-  - Build your first MVP
-  - Measure for customer impact
-  - Expand digital inventions
-- **Secure**
-  - Risk insights
-  - Business resilience
-  - Asset protection
-- **Manage**
-  - Business commitments
-  - Management baseline
-  - Expand the baseline
-  - Advance operations and design principles
-- **Govern**
-  - Benchmark assessment
-  - Governance foundation
-  - Improve the foundation
 
 -----
 
@@ -197,6 +153,59 @@
 - Physically separated instance of Azure cloud services
 - Operated by 21Vianet
 - All data stays within China to ensure compliance
+
+
+-----
+
+<br>
+
+## Cloud Adoption Framework for Azure (optional study)
+- The Best practices / One Microsoft approach to cloud adoption
+- Tools, guidance and narratives for strategies and outcomes
+
+### Strategy
+- Motivations
+- Business outcomes
+- Financial considerations
+
+### Plan
+- Rationalize your digital estate
+- Organizational alignment
+- Skills readiness plan
+- DevOps cloud adoption plan
+
+### Ready
+- Operating model alignment
+- Azure landing zone conceptual architecture
+- Azure landing zone design areas
+- Implementation options
+
+### Migrate
+- Migration scenarios
+- Cloud migration best practices
+- Process improvements
+
+### Innovate
+- Business value consensus
+- Build your first MVP
+- Measure for customer impact
+- Expand digital inventions
+
+### Secure
+- Risk insights
+- Business resilience
+- Asset protection
+
+### Manage
+- Business commitments
+- Management baseline
+- Expand the baseline
+- Advance operations and design principles
+
+### Govern
+- Benchmark assessment
+- Governance foundation
+- Improve the foundation
 
 -----
 
