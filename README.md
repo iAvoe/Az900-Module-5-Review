@@ -21,12 +21,13 @@
 - *Device Management*
 
 ### Conditional Access
-- Advanced access policy based on:
+- If a user wants to access a resource, then they must complete an action by detection:
   - User or Group Membership
   - IP Location
   - Device Type
   - Application
   - Real-time risk detection
+- i.e.: A user wants to access an app like Microsoft 365 --> must perform MFA
 
 -----
 
@@ -161,8 +162,13 @@
   - Customer and Personal Data
 
 ### Trust Center
-- In-depth, expert information
-- Curated lists of recommended resources, arranged by topic.
+- Place to learn in-depth, expert information for Microsoft products:
+  - Security
+  - Privacy
+  - Compliance
+  - Policies
+  - Features
+  - Practices
 - Role-specific information for:
   - Musiness managers
   - Administrators
@@ -187,75 +193,10 @@
   - Physically isolated from non-US government deployments
   - Accessible only to screened, authorized personnel
 
-### Sovereign Regions - UAzure China
+### Sovereign Regions - Azure China
 - Physically separated instance of Azure cloud services
-- Ooperated by 21Vianet
+- Operated by 21Vianet
 - All data stays within China to ensure compliance
-
------
-
-*Lab - Azure Active Directory Users and Groups*
-- Create a new Azure Active Directory (Azure AD) tenant
-- Create an Azure AD user account.
-- Create a new Azure AD group
-- Add the user to the group
-- Sign into the portal as the new user
-
-*Lab - Manage access with RBAC*
-- Create an account in Azure AD
-- Configure RBAC VM contributor for the AD Account
-- Use Powershell to create a Virtual Machine
-- Verify the account can stop and start the VM
-
-*Lab - Manage Resource Locks*
-- Create a resource
-- Apply a read-only and a delete resource lock
-- Test the resource locks
-- Remove the resource lock
-
-*Lab - Create an Azure Polic*
-- Create a policy assignment.
-- Test the allowed location policy.
-- Delete the policy assignment
-
------
-
-### Network Security Groups (NSGs):
-- Azure applies default/baseline security rules to new NSGs, Override default rules with new, higher priority rules.
-- filter network traffic to and from Azure resources on Azure Virtual Networks
-- Set in-outbound rules by destination IP, ports, and protocols
-- Add multiple rules, as needed, within subscription limits
-
-*Lab - Implement a Network Security Group*
-
-### Azure Firewall
-- A stateful, managed Firewall as a Service (FaaS)
-- Grants/denies server access based on originating IP
-- Applies in-outbound traffic filtering rules
-- Built-in high availability
-- Unrestricted cloud scalability
-- Uses Azure Monitor logging
-
-### Azure Application Gateway
-- Provides a Web Application Firewall (WAF)
-- WAF provides centralized, inbound protection for web apps
-
-### DDoS protection
-- Sanitizes unwanted network traffic before it impacts service availability
-- Basic service tier is automatically enabled in Azure
-- Standard service tier adds mitigation capabilities
-  - tuned to protect Azure Virtual Network resources
-
------
-
-### Defense in depth
-- NSGs + Azure Firewall
-- **Perimeter layer:**
-  - By Azure DDoS Protection + Azure Firewall
-  - Protects network boundaries
-- **Networking layer:**
-  - By Network Security Group (NSG)'s in-outbound rules
-  - Permits traffic to pass between networked resources
 
 -----
 
@@ -263,28 +204,58 @@
 
 ## Quiz
 
-### Azure Logic Apps / Functions
+### Security
 
-#### Within Microsoft Sentinel, which Azure product is used to run automated playbooks in response to alerts? 
-- Azure Logic Apps
+#### Which Azure Active Directory tool can vary the credentials needed to log in based on signals, such as where the user is located? 
+- Conditional Access
 
-#### ________ is a serverless, no-code solution for automating workflows. It integrates with hundreds of other services, making it a powerful solution for SOAR.
-- Azure Logic Apps
+#### Which Azure Active Directory (Azure AD) feature is used to provide access to resources based on organizational policies?
+- Conditional Access
 
-#### You want to orchestrate a workflow by using APIs from several well-known services. Which is the best option for this scenario?
-- Azure Logic Apps
+#### ________ collects signals from the user, makes decisions based on those signals, and then enforces that decision by allowing or denying the access request or challenging for a multifactor authentication response.
+- Conditional Access
 
-#### Your team has limited experience with writing custom code, but it sees tremendous value in automating several important business processes. Which of the following options is your team's best option?
-- Azure Logic Apps
+#### True or False:
+- **Azure RBAC policies override restrictions defined by resource locks:**
+  - False, resource lock cannot be overriden
+- **If you place a resource lock on a resource group, all of the resources within the resource group will also have the resource lock applied**
+  - True
+- **Resource locks can be applied to individual resources, resource groups, or even an entire subscription.**
+  - True
+- **There are two types of resource locks, one that prevents users from deleting and one that prevents users from changing or deleting a resource.**
+  - True
 
-#### What is the difference between Azure Functions and Azure Logic Apps?
-- You can call Azure Functions from Azure Logic Apps, and vice versa
-- They differ at intent:
-  - Azure Functions is a serverless compute service
-  - Azure Logic Apps is intended to be a serverless orchestration service
+#### Which security model assumes the worst-case security scenario, and protects resources accordingly?
+- Zero trust
 
-#### You need to process messages from a queue, parse them by using some existing imperative logic written in Java, and then send them to a third-party API. Which serverless option should you choose?
-- Azure Functions
+#### Match description to Zero Trust model's guiding principles:
+- **Always authenticate and authorize based on all available data points**
+  - Verify explicitly
+- **Limit user access with Just-in-time and Just-enough-access, risk-based adaptive policies, and data protection**
+  - Use least privilege access
+- **Segment access, verify end-to-end encryption, use analytics to get visibility, drive threat detection and improve defenses**
+  - Assume Breach
+
+-----
+
+### Compliance
+
+#### Where can you access details about the personal data Microsoft processes and how the company processes it, including for Cortana?
+- Microsoft Privacy Statement
+
+#### Where can you access information about how the Microsoft cloud helps the organization secure sensitive data and comply with applicable laws and regulations? 
+- True Center
+
+#### Where can an IT department find reference blueprints and policy definitions for common standards that it can apply directly to its Azure subscriptions?
+- Azure compliance documentation
+
+#### Which of the following does Azure Active Directory support for passwordless authentication?
+- User X509 Certificates
+
+#### Which of the following does Azure Active Directory support for passwordless authentication?
+- FIDO2 security keys (key providers)
+- Microsoft Authenticator
+- Windows Hello for Business
 
 -----
 
