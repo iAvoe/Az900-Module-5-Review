@@ -31,6 +31,8 @@
 
 -----
 
+<br>
+
 ## Azure Governance Methodologies
 
 ### Role-Based Access Control (RBAC)
@@ -114,8 +116,7 @@
   - Online Services
 
 ### Data Protection Addendum (DPA)
-- Sets forth the obligations with respect to the processing & security of:
-  - Customer and Personal Data
+- Sets forth the obligations with respect to the processing & security of customer and personal data
 
 ### Trust Center
 - Place to learn in-depth, expert information for Microsoft products:
@@ -235,9 +236,6 @@
 
 #### Which is likely the best way for companies to identify which billing department each Azure resource belongs to?
 - Tags
-
-#### Which of the following does Azure Active Directory support for passwordless authentication?
-- User X509 Certificates
 
 #### Which of the following does Azure Active Directory support for passwordless authentication?
 - FIDO2 security keys (key providers)
