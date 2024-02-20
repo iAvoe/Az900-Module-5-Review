@@ -13,12 +13,12 @@
 
 ### Azure Entra (Azure Active Directory / AAD)
 - A cloud-based identity and access management service
-- **Authentication**: Employees' sign-in
-- **Single sign-on (SSO)**
-- **Application management**
-- **Business to Business (B2B)**
-- **Business to Customer (B2C) identity services**
-- **Device Management**
+- *Authentication*: Employees' sign-in
+- *Single sign-on (SSO)*
+- *Application management*
+- *Business to Business (B2B)*
+- *Business to Customer (B2C) identity services*
+- *Device Management*
 
 ### Conditional Access
 - Advanced access policy based on:
@@ -123,27 +123,100 @@
 
 <br>
 
-## Azure network security
-- A layered multi-level protection approach similar to OSI levels
-- Attacks against one layer are isolated from subsequent layers
+## Privacy, compliance, data protection standards
 
-### Shared Security
-- Migrating from customer to cloud datacenters shifts the responsibility for security
-- Security becomes a shared concern as the on-premise data
-- **Service model dependent:**
+### Security
+- Azure has built in intelligent security that helps to protect against cyberthreats, using automation & AI.
 
-| Responsibility                        | On-Premises | IaaS model  | PaaS model  | SaaS model  |
-|---------------------------------------|-------------|-------------|-------------|-------------|
-| `Data, governance & Rights Mgmt.    ` | Customer    | Customer    | Customer    | Customer    |
-| `Client endpoints                   ` | Customer    | Customer    | Customer    | Customer    |
-| `Account & access management        ` | Customer    | Customer    | Customer    | Customer    |
-| `Identity & directory infrastructure` | Customer    | Customer    | *Ms*/Cs     | *Ms*/Cs     |
-| `Application                        ` | Customer    | Customer    | *Ms*/Cs     | *Microsoft* |
-| `Network Controls                   ` | Customer    | Customer    | *Ms*/Cs     | *Microsoft* |
-| `Operating System                   ` | Customer    | Customer    | *Microsoft* | *Microsoft* |
-| `Physical Hosts                     ` | Customer    | *Microsoft* | *Microsoft* | *Microsoft* |
-| `Physical Network                   ` | Customer    | *Microsoft* | *Microsoft* | *Microsoft* |
-| `Physical Datacenter                ` | Customer    | *Microsoft* | *Microsoft* | *Microsoft* |
+### Privacy
+- Azure committs to ensure the privacy of org. through:
+  - Contractual agreements
+  - Providing user control & transparency
+
+### Compliance
+- Azure respects local laws & regulations
+- Azure provides comprehensive coverage of compliance offerings
+
+### Compliance Terms and Requirements
+- Criminal Justice Information Services (CJIS)
+- Health Insurance Portability & Accountability Act (HIPAA)
+- CSA STAR Certification
+- ISO/IEC 27018
+- EU Model Clauses
+- National Institute of Standards and Technology (NIST)
+
+### Microsoft privacy statement
+- Provides openness & honesty about how Microsoft handles user data, explains:
+  - What data Microsoft processes
+  - How Microsoft processes it
+  - Purposes/uses of the data
+
+### Online Services Terms
+- The licensing terms define the terms & conditions for your purchase:
+  - Products
+  - Online Services
+
+### Data Protection Addendum (DPA)
+- Sets forth the obligations with respect to the processing & security of:
+  - Customer and Personal Data
+
+### Trust Center
+- In-depth, expert information
+- Curated lists of recommended resources, arranged by topic.
+- Role-specific information for:
+  - Musiness managers
+  - Administrators
+  - Engineers
+  - Risk assessors
+  - Privacy officers
+  - Legal teams
+
+### Azure Compliance Documentation
+- A comprehensive set of compliance offerings to help orgs to comply with:
+  - National requirements
+  - Regional requirements
+  - Industry-specific requirements
+
+### Sovereign Regions - US Government services
+- Meets the security & compliance needs of:
+  - US federal agencies
+  - US state and local governments
+  - US solution providers
+- Azure Governmnet:
+  - Separate instance of Azure
+  - Physically isolated from non-US government deployments
+  - Accessible only to screened, authorized personnel
+
+### Sovereign Regions - UAzure China
+- Physically separated instance of Azure cloud services
+- Ooperated by 21Vianet
+- All data stays within China to ensure compliance
+
+-----
+
+*Lab - Azure Active Directory Users and Groups*
+- Create a new Azure Active Directory (Azure AD) tenant
+- Create an Azure AD user account.
+- Create a new Azure AD group
+- Add the user to the group
+- Sign into the portal as the new user
+
+*Lab - Manage access with RBAC*
+- Create an account in Azure AD
+- Configure RBAC VM contributor for the AD Account
+- Use Powershell to create a Virtual Machine
+- Verify the account can stop and start the VM
+
+*Lab - Manage Resource Locks*
+- Create a resource
+- Apply a read-only and a delete resource lock
+- Test the resource locks
+- Remove the resource lock
+
+*Lab - Create an Azure Polic*
+- Create a policy assignment.
+- Test the allowed location policy.
+- Delete the policy assignment
 
 -----
 
