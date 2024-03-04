@@ -324,7 +324,8 @@
 #### Your company plans to move several servers to Azure. The company's compliance policy states that a server named FinServer must be on a separate network segment.
 #### Which Azure solution should you recommend?
 - A virtual network for FinServer and another virtual network for all the other servers
-Note: Networks in Azure are known as virtual networks. A virtual network can have multiple IP address spaces and multiple subnets. Azure automatically routes traffic between different subnets within a virtual network.
+- Note: Networks in Azure are known as virtual networks. A virtual network can have multiple IP address spaces and multiple subnets,
+- Note: Azure automatically routes traffic between different subnets within a virtual network.
 
 #### Where can a legal team access information around how the Microsoft cloud helps them secure sensitive data and comply with applicable laws and regulations?
 - Trust Center
@@ -348,11 +349,10 @@ Note: Networks in Azure are known as virtual networks. A virtual network can hav
 
 -----
 
-### Unsorted
+### Virtual Network / VNet
 
-#### Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
-#### The company has users that work remotely. The remote workers require access to the VMs on VNet1. To provide access for the remote workers, you:
-- Configure a Point-to-Site (P2S) VPN.
+#### You need to allow resources on two different Azure virtual networks to communicate with each other. What should you configure?
+- Virtual Network peering / VNet Peering
 
 #### You have an Azure environment that contains multiple Azure virtual machines.
 #### You plan to implement a solution that enables the client computers on your on-premises network to communicate to the Azure virtual machines.
@@ -360,6 +360,14 @@ Note: Networks in Azure are known as virtual networks. A virtual network can hav
 #### What 2 Azure resources should you include in the recommendation?
 - A virtual network gateway
 - A gateway subnet
+
+#### Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
+#### The company has users that work remotely. The remote workers require access to the VMs on VNet1. To provide access for the remote workers, you:
+- Configure a Point-to-Site (P2S) VPN.
+
+-----
+
+### Unsorted
 
 #### Your company plans to migrate all its network resources to Azure. You need to start the planning process by exploring Azure.
 #### What should you create first?
