@@ -276,6 +276,9 @@
 #### To achieve this they used Delete lock on the Storage Account resource. Will this solution work?
 - Yes
 
+#### Your organization plans to deploy several production virtual machines that will have consistent resource usage throughout the year. What can you use to minimize the costs of the virtual machines without reducing the functionality of the virtual machines?
+- Azure Reservations
+
 -----
 
 <br>
