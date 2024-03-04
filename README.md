@@ -288,9 +288,6 @@
 #### Each Azure subscription can contain multiple account administrators
 - False, 1 account administrator & 1 service administrator
 
-#### Each Azure subscription can be managed by using a Microsoft account only
-- False, Azure Active Directory / Azure Entra account is required
-
 #### An Azure Resource group contains multiple Azure subscription
 - False, multiple resource-(group)s is/are under Azure subscription
 
