@@ -31,8 +31,6 @@
 
 -----
 
-<br>
-
 ## Azure Governance Methodologies
 
 ### Role-Based Access Control (RBAC)
@@ -79,8 +77,6 @@
   - Resource Groups
 
 -----
-
-<br>
 
 ## Privacy, compliance, data protection standards
 
@@ -155,10 +151,7 @@
 - Operated by 21Vianet
 - All data stays within China to ensure compliance
 
-
 -----
-
-<br>
 
 ## Cloud Adoption Framework for Azure (optional study)
 - The Best practices / One Microsoft approach to cloud adoption
@@ -210,8 +203,6 @@
 
 -----
 
-<br>
-
 ## Quiz
 
 ### Authentication & Authorization features
@@ -222,8 +213,25 @@
 #### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
 - Multi-factor Authentication (MFA)
 
+#### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
+- Multifactor Authentication (MFA)
+
+#### Which of the following does Microsoft Entra (Azure Active Directory) support for passwordless authentication?
+- FIDO2 security keys (key providers)
+- Microsoft Authenticator
+- Windows Hello for Business
+
 #### How can the IT department reduce the number of times users must authenticate to access multiple applications?
 - Single sign-in (SSO)
+
+#### Which two services are provided by Microsoft Entra (Azure Active Directory)?
+- Authentication & Single sign-on (SSO)
+
+#### How can the IT department reduce the number of times users must authenticate to access multiple applications?
+- Single sign-on (SSO)
+
+#### What enables a user to sign in one time and use that credential to access multiple resources and applications from different providers?
+- Single sign-on (SSO)
 
 #### Which Microsoft Entra feature can you use to ensure that users can only access Microsoft Office 365 applications from approved client applications?
 - Conditional Access
@@ -243,54 +251,56 @@
 #### What can you use to ensure that users authenticate by using multi-factor authentication (MFA) when they attempt to sign in from a specific location?
 - Conditional Access
 
-#### Which is likely the best way for companies to identify which billing department each Azure resource belongs to?
-- Tags
-
-#### Which of the following does Azure Active Directory support for passwordless authentication?
-- FIDO2 security keys (key providers)
-- Microsoft Authenticator
-- Windows Hello for Business
-
-#### Which statement describes Azure Resource Locks?
-- A feature that allows customers to protect their resources from human-error accidents like modification or deletion of the resources 
-
-#### What kinds of security locks are supported by Azure?
-- Read-only
-- Delete
-
-#### True or False
-- **Read-only locks only allow read actions on resources. Every other action is blocked**
-  - True
-- **Delete locks only allows resoruces to be deleted but not created or updated.**
-  - False
-
-#### Azure Resource Locks can be applied on which scopes?
-- Azure Resource
-- Azure Resource Gruops
-- Azure Subscriptions
+#### What can you use to ensure that a user can only access applications from compliant devices?
+- Conditional Access
 
 -----
 
-<br>
-
 ### Authentication & Authorization actions
 
-#### How can companies allow some users to control the VMs in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
-- Create a role assignment through Azure role-based access control (Azure RBAC)
+#### What can you use to sync identities from an on-premises Active Directory Domain Services (AD DS) domain to Microsoft Entra tenant?
+- Microsoft Entra Connect
+
+#### Each Azure subscription can be managed by using a Microsoft account only
+- False, Azure Entra (Azure Active Directrory) account is required
 
 #### Which is the best way for companies to ensure that they only deploy cost-effective virtual machine SKU sizes?
 - Create a policy in Azure Policy that specifies the allowed SKU sizes
 
-#### Contoso company wants to protect their production Storage Account from being deleted by accident. Currently their Administrators group has Owner privileges on the entire resource group where the storage account resides.
-#### To achieve this they used Delete lock on the Storage Account resource. Will this solution work?
-- Yes
+#### You need to recommend a solution for Azure virtual machine deployments. The solution must enforce company standards on the virtual machines. What should you include in the recommendation?
+- Azure Policy
 
-#### Your organization plans to deploy several production virtual machines that will have consistent resource usage throughout the year. What can you use to minimize the costs of the virtual machines without reducing the functionality of the virtual machines?
-- Azure Reservations
+#### What can you use to ensure that new and existing Azure resources stay in compliance with corporate standards?
+- Azure Policy
+
+#### What can you use to restrict the deployment of a virtual machine to a specific location?
+- Azure Policy
+
+#### What can you use to ensure that a development team can only create virtual machines of a certain size?
+- Azure Policy
+
+#### ________ enforces standards and assess compliance across your organization
+- Azure Policy
+
+#### You need to recommend a solution for Azure virtual machine deployments. The solution must enforce company standards on the virtual machines. What should you include in the recommendation?
+- Azure Policy
+
+#### How can you prevent non-compliant resources from being created, without having to manually evaluate each resource as it's created?
+- Azure Policy
+
+#### ________ is a repeatable set of governance tools that helps development teams quickly build and create new environments while adhering to organizational compliance to speed up development and deployment.
+- Azure Policy
+
+#### You need to ensure that multi-factor authentication (MFA) is enabled on accounts with write permissions in an Azure subscription. What should you implement?
+- Azure Policy
+
+#### What provide organizations with the ability to manage the compliance of Azure resources across multiple subscriptions.
+- Azure Policies
+
+#### Which of the following is true for Azure Policy?
+- A service in Azure that enables you to create, assign, and manage policies that control or audit your resources
 
 -----
-
-<br>
 
 ### Security models
 
@@ -311,27 +321,9 @@
 - **Segment access, verify end-to-end encryption, use analytics to get visibility, drive threat detection and improve defenses**
   - Assume Breach
 
-#### True or False:
-- **Azure RBAC policies override restrictions defined by resource locks:**
-  - False, resource lock cannot be overriden
-- **If you place a resource lock on a resource group, all of the resources within the resource group will also have the resource lock applied**
-  - True
-- **Resource locks can be applied to individual resources, resource groups, or even an entire subscription.**
-  - True
-- **There are two types of resource locks, one that prevents users from deleting and one that prevents users from changing or deleting a resource.**
-  - True
-
 -----
 
-<br>
-
 ### Compliance
-
-#### Your company plans to move several servers to Azure. The company's compliance policy states that a server named FinServer must be on a separate network segment.
-#### Which Azure solution should you recommend?
-- A virtual network for FinServer and another virtual network for all the other servers
-- Note: Networks in Azure are known as virtual networks. A virtual network can have multiple IP address spaces and multiple subnets,
-- Note: Azure automatically routes traffic between different subnets within a virtual network.
 
 #### Where can a legal team access information around how the Microsoft cloud helps them secure sensitive data and comply with applicable laws and regulations?
 - Trust Center
@@ -345,9 +337,6 @@
 #### Where can an IT department find reference blueprints and policy definitions for common standards that it can apply directly to its Azure subscriptions?
 - Azure compliance documentation
 
-#### What provide organizations with the ability to manage the compliance of Azure resources across multiple subscriptions.
-- Azure Policies
-
 #### Your company plans to migrate to Azure. The company has several departments. All the Azure resources used by each department will be managed by a department administrator.
 #### What 2 ways can you segment Azure for the departments?
 - Multiple subscriptions
@@ -355,26 +344,70 @@
 
 -----
 
-### Virtual Network / VNet
+### Azure role-based access control (Azure RBAC)
 
-#### You need to allow resources on two different Azure virtual networks to communicate with each other. What should you configure?
-- Virtual Network peering / VNet Peering
+#### How can companies allow some users to control the VMs in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
+- Create a role assignment through Azure role-based access control (Azure RBAC)
 
-#### You have an Azure environment that contains multiple Azure virtual machines.
-#### You plan to implement a solution that enables the client computers on your on-premises network to communicate to the Azure virtual machines.
-#### You need to recommend which Azure resources must be created for the planned solution.
-#### What 2 Azure resources should you include in the recommendation?
-- A virtual network gateway
-- A gateway subnet
+#### How can Tailwind Traders allow some users to control the virtual machines in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
+- Create a role assignment through Azure RBAC
 
-#### Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
-#### The company has users that work remotely. The remote workers require access to the VMs on VNet1. To provide access for the remote workers, you:
-- Configure a Point-to-Site (P2S) VPN.
+#### What can you use to allow a user to manage all the resources in a resource group?
+- Azure role-based access control (Azure RBAC)
+
+#### (Repeats from M1-2) What can you use to allow a user to manage all the resources in a resource group?
+- Azure role-based access control (Azure RBAC)
+
+#### What can you use to allow a user to manage all the resources in a resource group?
+- Azure role-based access control (Azure RBAC)
 
 -----
 
-### Unsorted
+### Resource Locks
 
-#### Your company plans to migrate all its network resources to Azure. You need to start the planning process by exploring Azure.
-#### What should you create first?
-- Subscription
+#### What can you apply to an Azure virtual machine to ensure that users cannot change or delete the resource?
+- A Resource Lock
+
+#### Which of the following is true for Resource locking?
+- Prevents resources from being accidentally deleted or changed
+
+#### Which statement describes Azure Resource Locks?
+- A feature that allows customers to protect their resources from human-error accidents like modification or deletion of the resources 
+
+#### What kinds of security locks are supported by Azure?
+- Read-only
+- Delete
+
+#### True or False
+- **Read-only locks only allow read actions on resources. Every other action is blocked**
+  - True
+- **Delete locks only allows resoruces to be deleted but not created or updated.**
+  - False
+
+#### Azure Resource Locks can be applied on which scopes?
+- Azure Resource
+- Azure Subscriptions
+- Azure Resource Groups
+
+#### True or False:
+- **Azure RBAC policies override restrictions defined by resource locks:**
+  - False, resource lock cannot be overriden
+- **If you place a resource lock on a resource group, all of the resources within the resource group will also have the resource lock applied**
+  - True
+- **Resource locks can be applied to individual resources, resource groups, or even an entire subscription.**
+  - True
+- **There are two types of resource locks, one that prevents users from deleting and one that prevents users from changing or deleting a resource.**
+  - True
+
+#### Contoso company wants to protect their production Storage Account from being deleted by accident. Currently their Administrators group has Owner privileges on the entire resource group where the storage account resides. To achieve this they used Delete lock on the Storage Account resource. Will this solution work?
+- Yes
+
+-----
+
+### Microsoft Purview Data Policy
+
+#### Which feature in the Microsoft Purview governance portal should you use to manage access to data sources and datasets?
+- Data Policy
+
+#### Which feature in the Microsoft purview governance portal should you use to manage access?
+- Collections
