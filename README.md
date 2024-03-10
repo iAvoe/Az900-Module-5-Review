@@ -216,6 +216,18 @@
 
 ### Authentication & Authorization features
 
+#### What Microsoft Entra feature can you use to configure security authentication that requires users to use their mobile phone to sign in?
+- Multi-factor Authentication (MFA)
+
+#### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
+- Multi-factor Authentication (MFA)
+
+#### How can the IT department reduce the number of times users must authenticate to access multiple applications?
+- Single sign-in (SSO)
+
+#### Which Microsoft Entra feature can you use to ensure that users can only access Microsoft Office 365 applications from approved client applications?
+- Conditional Access
+
 #### Which Azure Active Directory tool can vary the credentials needed to log in based on signals, such as where the user is located? 
 - Conditional Access
 
@@ -228,11 +240,8 @@
 #### How can the IT department ensure that employees at the company's retail stores can access company applications only from approved tablet devices?
 - Conditional Access
 
-#### How can the IT department use biometric properties, such as facial recognition, to enable delivery drivers to prove their identities?
-- MFA
-
-#### How can the IT department reduce the number of times users must authenticate to access multiple applications?
-- SSO
+#### What can you use to ensure that users authenticate by using multi-factor authentication (MFA) when they attempt to sign in from a specific location?
+- Conditional Access
 
 #### Which is likely the best way for companies to identify which billing department each Azure resource belongs to?
 - Tags
