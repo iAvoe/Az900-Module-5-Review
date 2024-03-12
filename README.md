@@ -346,6 +346,9 @@
 
 ### Azure role-based access control (Azure RBAC)
 
+#### To which object or level is an Azure role-based access control (RBAC) role applied?
+- Scope (An area of resource (sets) by the user's role)
+
 #### How can companies allow some users to control the VMs in each environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
 - Create a role assignment through Azure role-based access control (Azure RBAC)
 
