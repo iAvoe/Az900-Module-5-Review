@@ -404,13 +404,3 @@
 
 #### Contoso company wants to protect their production Storage Account from being deleted by accident. Currently their Administrators group has Owner privileges on the entire resource group where the storage account resides. To achieve this they used Delete lock on the Storage Account resource. Will this solution work?
 - Yes
-
------
-
-### Microsoft Purview Data Policy
-
-#### Which feature in the Microsoft Purview governance portal should you use to manage access to data sources and datasets?
-- Data Policy
-
-#### Which feature in the Microsoft purview governance portal should you use to manage access?
-- Collections
